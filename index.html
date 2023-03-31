@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="scripts/graph.js"></script>
 	<title></title>
 </head>
 <body>
@@ -17,7 +18,26 @@
 	</ul>
 	<img class="img_home" src="https://urlz.fr/laSk">
 	<canvas class="graph" width="600" height="550"></canvas>
+
+	<div style="display: flex;flex-wrap: wrap;">
+        	<div>
+			<canvas style="background-color: white;" id="Graph_1" width="400" height="200"></canvas>
+			<script>
+			startGraph("Graph_1","Batterie",[(100*50/100), (70*50/100), (60*50/100), (50*50/100), (20*50/100), (10*50/100)],['10h00', '10h30', '11h00', '11h30', '12h00', '12h30'],"%");
+			</script>
+        	</div>
+        	<div>
+			<canvas style="background-color: white;" id="Graph_2" width="400" height="200"></canvas>
+			<script>
+			startGraph("Graph_2","Pression",[12, 19, 3, 5, 2, 3],['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin'],"J");
+			</script>
+        	</div>
+	</div>
+
 </body>
+
+<script src="scripts/loadData.js"></script>
+
 </html>
 
 <style>
