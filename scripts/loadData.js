@@ -5,7 +5,7 @@ document.body.appendChild(div); // Ajouter l'élément div au corps de la page
 all_data = document.getElementById("all_data");
 
 // Charger les données depuis le fichier JSON
-fetch('data.json')
+fetch('https://maximeue4.github.io/the-blanche-box/data.json')
   .then(response => response.json())
   .then(data => {
     // Parcourir chaque élément de la liste
